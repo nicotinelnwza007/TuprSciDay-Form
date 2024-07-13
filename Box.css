@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Flavors&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body{
+    background-color: #876543;
+}
+.box-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 500px;
+    height: 500px;
+    max-width: 100%;
+}
+
+.box-content h1 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0;
+}
+
+.box-content h2 {
+    font-size: 1.2em;
+    color: #777;
+    margin: 10px 0;
+}
+
+.box-content p {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.btn-register {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8b5e34;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-register:hover {
+    background-color: #6e4828;
+}
+
+.box-link {
+    transition: transform 0.2s;
+}
+
+.box-link:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 1024px) {
+    .box {
+        height: 200px;
+        padding: 0.5rem;
+    }
+    .box-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 1920px) {
+    .box-container {
+        margin: 0 auto;
+    }
+}
+
