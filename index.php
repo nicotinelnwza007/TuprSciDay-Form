@@ -11,8 +11,8 @@ for ($i = 1; $i <= $num_members; $i++) {
     $tel = htmlspecialchars($_POST["tel$i"]);
 
     $conn = mysqli_connect("localhost", "root", "admin");
-    $db = mysqli_select_db($conn,"student_db");
-    $sql = "insert into student (teamname,name, surname, studentid, room, number, tel) values ('$teamname','$name', '$surname', '$studentid', '$room', '$number', '$tel')";
+    $db = mysqli_select_db($conn,"sciweek_db");
+    $sql = "insert into hydrolic (teamname,name, surname, studentid, room, number, tel) values ('$teamname','$name', '$surname', '$studentid', '$room', '$number', '$tel')";
     mysqli_query($conn, $sql);
     print $sql;
 }
