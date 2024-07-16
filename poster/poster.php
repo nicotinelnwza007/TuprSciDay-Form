@@ -5,23 +5,16 @@
     <meta charset="UTF-8">
     <title>SciDayForm</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="Navbar.css" rel="stylesheet">
-    <link href="Form.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/Form.css">
+    <link rel="stylesheet" href="../css/Navbar.css">
 </head>
 
 <body>
     <nav>
         <div class="container">
             <div class="logo">
-                <a href="first.php"><img src="./img/TuprLogo.png" alt="TuprLogo"></a>
+                <a href="../FirstPage.html"><img src="../img/TuprLogo.png" alt="TuprLogo"></a>
             </div>
-            <!-- <div class="links">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-                <a href="#">Link 4</a>
-                <a href="#">Link 5</a>
-            </div> -->
         </div>
     
     </nav>
@@ -29,14 +22,14 @@
   
 
    
-    <form id="competitionForm" method="POST" action="index.php" class="competition-form">
-    <h1>Hydrolic Arms Competition</h1>
+    <form id="competitionForm" method="POST" action="poster_db.php" class="competition-form">
+    <h1>Sci Poseter</h1>
         <div class='form-group'>
-            <label for='teamname'>ชื่อทีม: </label>
+            <label for='teamname'>ชื่อผลงาน: </label>
             <input type='text' id='teamname' name='teamname' class='form-control' required>
         </div>
         <?php
-        $num_members = 5;
+        $num_members = 1;
         for ($i = 1; $i <= $num_members; $i++) {
             echo "
             <fieldset class='member-fieldset'>
@@ -71,7 +64,7 @@
         ?>
         <input type="submit" value="Submit" class="submit-button">
     </form>
-
+    <div class="footer">© 2024 TUPRDev. All rights reserved.</div>
 
     <script src="script.js"></script>
 
@@ -79,4 +72,3 @@
 
 
 </html>
-

@@ -1,5 +1,7 @@
 
 <?php
+include 'config.php';
+
 $num_members = 5;
 for ($i = 1; $i <= $num_members; $i++) {
     $teamname = htmlspecialchars($_POST["teamname"]);
@@ -21,9 +23,9 @@ $count_query = "SELECT COUNT(DISTINCT teamname) AS team_count FROM student";
 $count_result = mysqli_query($conn, $count_query);
 
 if ($count_result) {
-    $row = mysqli_fetch_assoc($count_result);
-    $team_count = $row['team_count'];
-    echo "Number of teams registered: " . $team_count;
+    mysqli_close($conn);
+    header("Location: ../confirmation.html");
+    exit();
 } else {
     echo "Error: " . mysqli_error($conn);
 }

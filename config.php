@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "admin";
-$dbname = "student_db";
+$dbname = "sciweek_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
