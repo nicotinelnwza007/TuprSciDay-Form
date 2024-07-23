@@ -1,81 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
-body{
+
+body {
     background-color: #876543;
+    font-family: "Noto Sans Thai", sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
 .box-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 20px;
-    font-family: "Noto Sans Thai", sans-serif;
 }
 
 .box {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 10px;
     padding: 20px;
-    width: 500px;
-    height: 500px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.box-content {
+    text-align: center;
 }
 
 .box-content h1 {
-    font-size: 1.5em;
-    color: #333;
+    font-size: 2em;
+    color: #333333;
     margin: 0;
 }
 
 .box-content h2 {
-    font-size: 1.2em;
-    color: #777;
+    font-size: 1.5em;
+    color: #555555;
     margin: 10px 0;
 }
 
 .box-content p {
-    font-size: 1em;
-    color: #555;
+    font-size: 1.1em;
+    color: #666666;
     margin: 10px 0;
 }
 
 .btn-register {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #8b5e34;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
     text-align: center;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn-register:hover {
     background-color: #6e4828;
-}
-
-.box-link {
-    transition: transform 0.2s;
-}
-
-.box-link:hover {
     transform: scale(1.05);
 }
 
+.box-link {
+    transition: transform 0.3s;
+}
+
+.box-link:hover {
+    transform: scale(1.1);
+}
 
 @media (max-width: 1024px) {
     .box {
-        height: 200px;
-        padding: 0.5rem;
+        padding: 15px;
     }
     .box-container {
         flex-direction: column;
-        gap: 2rem;
+        gap: 20px;
     }
 }
 
-@media (max-width: 1920px) {
-    .box-container {
-        margin: 0 auto;
+@media (max-width: 480px) {
+    .box {
+        padding: 10px;
+    }
+    .box-content h1 {
+        font-size: 1.5em;
+    }
+    .box-content h2 {
+        font-size: 1.2em;
+    }
+    .box-content p {
+        font-size: 1em;
+    }
+    .btn-register {
+        padding: 10px 20px;
+        font-size: 0.9em;
     }
 }
-

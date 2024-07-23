@@ -4,73 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <title>SciDayForm</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../css/Form.css">
     <link rel="stylesheet" href="../css/Navbar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <body>
-    <nav>
-        <div class="container">
-            <div class="logo">
-                <a href="../FirstPage.htm"><img src="../img/TuprLogo.png" alt="TuprLogo"></a>
+    <form id="competitionForm" method="POST" action="hydrolic_db.php" class="competition-form">
+        <div class="Details">
+            <div class="header">Register</div>
+            <div class="form-name">
+                รายการ <div class="highlight">Hydrolics Arm Competition</div>
+            </div>
+            <div class="descrpition">
+                โปรดกรอกข้อมูลให้ถูกต้องครบถ้วนเพื่อทำการลงทะเบียน
             </div>
         </div>
-    
-    </nav>
-
-  
-
-   
-    <form id="competitionForm" method="POST" action="hydrolic_db.php" class="competition-form">
-    <h1>Hydrolic Arms Competition</h1>
-        <div class='form-group'>
-            <label for='teamname'>ชื่อทีม: </label>
-            <input type='text' id='teamname' name='teamname' class='form-control' required>
         </div>
-        <?php
-        $num_members = 5;
-        for ($i = 1; $i <= $num_members; $i++) {
-            echo "
-            <fieldset class='member-fieldset'>
-                <legend>สมาชิกคนที่ $i</legend>
+        <div class='teamname-container'>
+            <label for='teamname'>ชื่อทีม: </label>
+            <div class='form-container'>
+                <input type='text' id='teamname' name='teamname' class='form-control' required>
+            </div>
+
+            <div class="border"></div>
+            <?php
+            $num_members = 5;
+            for ($i = 1; $i <= $num_members; $i++) {
+                echo "
+            <div class='member-fieldset'>
+                <div class='members'>สมาชิกคนที่ $i</div>
                 <div class='form-group'>
-                    <label for='name$i'>ชื่อ: </label>
+                    <label for='name$i' class='form'>ชื่อ: </label>
+                 <div class='form-container'>
                     <input type='text' id='name$i' name='name$i' class='form-control' required>
+                    </div>
+                    </div>
                 </div>
                 <div class='form-group'>
-                    <label for='surname$i'>นามสกุล: </label>
+                    <label for='surname$i' class='form'>นามสกุล: </label>
+                     <div class='form-container'>
                     <input type='text' id='surname$i' name='surname$i' class='form-control' required>
+                    </div>
                 </div>
                 <div class='form-group'>
-                    <label for='studentid$i'>เลขประจำตัวนักเรียน: </label>
+                    <label for='studentid$i' class='form'>เลขประจำตัวนักเรียน: </label>
+                     <div class='form-container'>
                     <input type='text' id='studentid$i' name='studentid$i' class='form-control' required>
                 </div>
                 <div class='form-group'>
-                    <label for='room$i'>ห้อง: </label>
+                    <label for='room$i' class='form'>ห้อง: </label>
+                     <div class='form-container'>
                     <input type='text' id='room$i' name='room$i' class='form-control' required>
+                    </div>
                 </div>
                 <div class='form-group'>
-                    <label for='number$i'>เลขที่: </label>
+                    <label for='number$i' class='form'>เลขที่: </label>
+                     <div class='form-container'>
                     <input type='text' id='number$i' name='number$i' class='form-control' required>
+                    </div>
                 </div>
                 <div class='form-group'>
-                    <label for='tel$i'>เบอร์โทร: </label>
-                    <input type='text' id='tel$i' name='tel$i' class='form-control' required>
+                    <label for='tel$i' class='form'>เบอร์ติดด่อ: </label>
+                    <div class='phone-input-container'>
+                        <input type='text' id='tel$i' name='tel$i' class='form-control phone-input' placeholder='087-654-3210' required>
+                    </div>
                 </div>
-            </fieldset>
-                  ";
-        }
-        ?>
-        <input type="submit" value="Submit" class="submit-button">
+            </div>";
+            }
+            ?>
+            <div class="submit-container">
+                <input type="submit" value="ดำเนินการต่อ" class="submit-button">
+            </div>
     </form>
     <div class="footer">© 2024 TUPRDev. All rights reserved.</div>
-
     <script src="script.js"></script>
-
 </body>
 
-
 </html>
-

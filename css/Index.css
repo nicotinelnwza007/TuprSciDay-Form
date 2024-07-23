@@ -23,7 +23,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
 }
 
 .container {
@@ -31,18 +31,19 @@ body {
     text-align: center;
     background-color: #FFFFFF;
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-height: 76.5vh;
-    min-width: 16rem;
-    height: 100%;
+    padding: 15px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    min-height: 70vh;
+    min-width: 90%;
+    max-width: 400px;
+    height: auto;
     width: 100%;
-    margin: 0 20px;
+    margin: 0 auto;
 }
 
 .header {
     background-color: #8B5D33;
-    padding: 25px;
+    padding: 15px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     display: flex;
@@ -52,19 +53,19 @@ body {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 80px;
 }
 
 .title {
-    font-size: 36px;
+    font-size: 28px;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     color: #8B5D33;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .description {
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Roboto", sans-serif;
     color: #8B5D33;
 }
@@ -72,48 +73,34 @@ body {
 .buttons {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 a {
     background-color: #8B5D33;
     color: #FFFFFF;
     border: none;
-    padding: 20px;
+    padding: 15px;
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 16px;
     margin: 10px 0;
     cursor: pointer;
     width: 100%;
     max-width: 300px;
     text-decoration: none;
     align-self: center;
+    text-align: center;
 }
 
-button:hover {
+a:hover {
     background-color: #6E4A26;
 }
 
-button:focus {
+a:focus {
     outline: none;
 }
 
 @media (max-width: 768px) {
-    .title {
-        font-size: 28px;
-    }
-
-    .description {
-        font-size: 16px;
-    }
-
-    button {
-        font-size: 16px;
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
     .title {
         font-size: 24px;
     }
@@ -122,8 +109,23 @@ button:focus {
         font-size: 14px;
     }
 
-    button {
+    a {
         font-size: 14px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    a {
+        font-size: 12px;
         padding: 10px;
     }
 }

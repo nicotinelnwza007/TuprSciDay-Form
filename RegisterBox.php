@@ -66,7 +66,7 @@
         </div>
         <div class="box box-link">
         <div class="box-content">
-                <h1>Sci week</h1>
+                <h1>Sci-Poster</h1>
                 <h2>อภิสันต์ สามัญตา</h2>
                 <p>ทีมที่สมัคร:<?php echo htmlspecialchars($team_count_poster); ?></p>
                 <a href="poster/poster.php" class="btn-register">Register</a>
