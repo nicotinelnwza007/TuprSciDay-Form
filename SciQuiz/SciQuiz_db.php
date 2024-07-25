@@ -9,8 +9,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+
 $count_query = "SELECT COUNT(DISTINCT teamname) AS team_count FROM sciquiz";
 $count_result = mysqli_query($conn, $count_query);
+
 
 if ($count_result) {
     $row = mysqli_fetch_assoc($count_result);

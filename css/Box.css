@@ -44,7 +44,13 @@ body {
 
 .box-content h2 {
     font-size: 1.5em;
-    color: #f880f8; 
+    color: #e283e2; 
+    margin: 10px 0;
+}
+
+.box-content h3 {
+    font-size: 1.5em;
+    color: #ff0000; 
     margin: 10px 0;
 }
 

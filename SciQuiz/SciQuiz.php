@@ -1,3 +1,13 @@
+<?php
+    $todayDate = new DateTime();
+    $dead_line = new DateTime('2024-06-24');
+    //echo 'aaa' . $todayDate . ' ' . $dead_line;
+    if ($todayDate > $dead_line) {
+        header('Location: ../notify.html');
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -62,6 +62,7 @@
                 <a href="pdf/Poster.pdf" class="details">คลิกดูรายละเอียด</a>
                 <p>ทีมที่สมัคร:<?php echo htmlspecialchars($team_count_poster); ?> / 40</p>
                 <h2>วันที่แข่ง : 13 ส.ค. 67 </h2>
+                <h3> วันปิดรับสมัคร : 13-16 ส.ค. 67 </h3>
                 <a href="poster/poster.php" class="btn-register">Register</a>
             </div>
         </div>
@@ -71,6 +72,7 @@
                 <a href="pdf/Hydrolicarm.pdf" class="details">คลิกดูรายละเอียด</a>
                 <p>ทีมที่สมัคร:  <?php echo htmlspecialchars($team_count_hydrolic); ?></p>
                 <h2>วันที่แข่ง : 13-16 ส.ค. 67</h2>
+                <h3> วันปิดรับสมัคร : 13-16 ส.ค. 67 </h3>
                 <a href="hydrolic/Hydrolic.php" class="btn-register">Register</a>
             </div>
         </div>
@@ -80,6 +82,7 @@
                 <a href="img/SciQuiz.png" class="details">คลิกดูรายละเอียด</a>
                 <p>ทีมที่สมัคร: <?php echo htmlspecialchars($team_count_sciquiz); ?> / 50</p>
                 <h2>วันที่แข่ง : 19 ส.ค. 67 </h2>
+                <h3> วันปิดรับสมัคร : 13-16 ส.ค. 67 </h3>
                 <a href="Sciquiz/SciQuiz.php" class="btn-register">Register</a>
             </div>
         </div>
@@ -88,6 +91,7 @@
                 <h1>การแข่งขันการแสดงทางวิทยาศาสตร์ (Science Show)</h1>
                 <a href="img/SciSHow.JPG" class="details">คลิกดูรายละเอียด</a>
                 <h2>วันที่แข่ง : 20 ส.ค. 67 </h2>
+                <h3> วันปิดรับสมัคร : 13-16 ส.ค. 67 </h3>
             </div>
         </div>
         <div class="box box-link">
@@ -96,6 +100,7 @@
                 <a href="pdf/Sccloth.pdf" class="details">คลิกดูรายละเอียด</a>
                 <p>ทีมที่สมัคร: <?php echo htmlspecialchars($team_count_sciquiz); ?> / 30</p>
                 <h2>วันที่แข่ง : 21 ส.ค. 67 </h2>
+                <h3> วันปิดรับสมัคร : 13-16 ส.ค. 67 </h3>
                 <a href="SciCloth/scicloth.php" class="btn-register">Register</a>
             </div>
         </div>
@@ -104,6 +109,7 @@
                 <h1>การแข่งขันโครงงานวิทยาศาสตร์และเทคโนโลยี ประเภททดลองและประเภทสิ่งประดิษฐ์</h1>
                 <a href="pdf/SciProject.pdf" class="details">คลิกดูรายละเอียด</a>
                 <h2>วันที่แข่ง : 23 ส.ค. 67 </h2>
+                <h3> วันปิดรับสมัคร : 13-16 ส.ค. 67 </h3>
             </div>
         </div>
     </div>

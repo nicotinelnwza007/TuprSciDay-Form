@@ -7,6 +7,7 @@ $MAX_TEAMS_M4_6 = 20;
 $MAX_TEAMS_M1_3 = 1;
 
 
+
 $num_members = 6;
 for ($i = 1; $i <= $num_members; $i++) {
     $teamname = htmlspecialchars($_POST["teamname"]);
@@ -30,7 +31,6 @@ $count_query = "SELECT
    SUM(CASE WHEN (room LIKE '1%' OR room LIKE '2%' OR room LIKE '3%') THEN 1 ELSE 0 END) AS M1_3	
 FROM scicloth";
 $count_result = mysqli_query($conn, $count_query);
-
 
 
 if ($row = mysqli_fetch_array($count_result)) {
@@ -69,4 +69,6 @@ if ($row = mysqli_fetch_array($count_result)) {
     echo "Error: " . mysqli_error($conn);
     mysqli_close($conn);
 }
+
+
 ?>
