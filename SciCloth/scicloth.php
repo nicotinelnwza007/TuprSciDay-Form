@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>SciDayForm</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Form.css">
     <link rel="stylesheet" href="../css/Navbar.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 
 <body>
-    <form id="competitionForm" method="POST" action="hydrolic_db.php" class="competition-form">
+<form id="competitionForm" method="POST" action="scicloth_db.php" class="competition-form">
         <div class="Details">
             <div class="header">Register</div>
             <div class="form-name">
-                รายการ <div class="highlight">Hydrolics Arm Competition</div>
+                รายการ <div class="highlight">การแข่งขัน Sci-Tech Clothing (ชุดวิทย์)</div>
             </div>
             <div class="descrpition">
                 โปรดกรอกข้อมูลให้ถูกต้องครบถ้วนเพื่อทำการลงทะเบียน
@@ -23,14 +23,14 @@
         </div>
         </div>
         <div class='teamname-container'>
-            <label for='teamname'>ชื่อทีม: </label>
+            <label for='teamname'>ชื่อผลงาน: </label>
             <div class='form-container'>
                 <input type='text' id='teamname' name='teamname' class='form-control' required>
             </div>
 
             <div class="border"></div>
             <?php
-            $num_members = 5;
+            $num_members = 6;
             for ($i = 1; $i <= $num_members; $i++) {
                 echo "
             <div class='member-fieldset'>
@@ -53,7 +53,8 @@
                     <input type='text' id='surname$i' name='surname$i' class='form-control' required>
                     </div>
                 </div>
-                <div class='form-group'>
+                </div>
+                            <div class='form-group'>
                           <label for='room$i' class='form'>ห้อง(601,201,302): </label>
                      <div class='form-container'><SELECT name='room$i' class='form-control' required><option value=''>- - Please select - -</option>";
 

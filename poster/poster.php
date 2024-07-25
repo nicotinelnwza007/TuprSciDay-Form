@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<form id="competitionForm" method="POST" action="poster.php" class="competition-form">
+<form id="competitionForm" method="POST" action="poster_db.php" class="competition-form">
         <div class="Details">
             <div class="header">Register</div>
             <div class="form-name">
@@ -35,6 +35,11 @@
                 echo "
             <div class='member-fieldset'>
                 <div class='members'>สมาชิกคนที่ $i</div>
+                  <div class='form-group'>
+                    <label for='studentid$i' class='form'>เลขประจำตัวนักเรียน: </label>
+                     <div class='form-container'>
+                    <input type='text' id='studentid$i' name='studentid$i' class='form-control' required  MAXLENGTH='5' onkeypress='if((event.keyCode<46)||(event.keyCode>57)) event.returnValue=false;'>
+                </div>
                 <div class='form-group'>
                     <label for='name$i' class='form'>ชื่อ: </label>
                  <div class='form-container'>
@@ -49,20 +54,23 @@
                     </div>
                 </div>
                 <div class='form-group'>
-                    <label for='studentid$i' class='form'>เลขประจำตัวนักเรียน: </label>
-                     <div class='form-container'>
-                    <input type='text' id='studentid$i' name='studentid$i' class='form-control' required>
-                </div>
-                <div class='form-group'>
-                    <label for='room$i' class='form'>ห้อง: </label>
-                     <div class='form-container'>
-                    <input type='text' id='room$i' name='room$i' class='form-control' required>
-                    </div>
+                          <label for='room$i' class='form'>ห้อง(601,201,302): </label>
+                     <div class='form-container'><SELECT name='room$i' class='form-control' required><option value=''>- - Please select - -</option>";
+
+                     
+                        for($j=1; $j<=6; $j++)
+                            for($k=1; $k<=12; $k++)
+                                print "<option value='$j". substr("0$k", -2) . "'>$j" . substr("0$k", -2) . "</option>";
+                  
+                    
+                    //<input type='text' id='room$i' name='room$i' class='form-control' required MAXLENGTH='3'>-->
+                
+                echo "</SELECT></div>
                 </div>
                 <div class='form-group'>
                     <label for='number$i' class='form'>เลขที่: </label>
                      <div class='form-container'>
-                    <input type='text' id='number$i' name='number$i' class='form-control' required>
+                    <input type='text' id='number$i' name='number$i' class='form-control' required MAXLENGTH='2' onkeypress='if((event.keyCode<46)||(event.keyCode>57)) event.returnValue=false;'>
                     </div>
                 </div>
                 <div class='form-group'>
@@ -75,7 +83,7 @@
             }
             ?>
             <div class="submit-container">
-                <input type="submit" value="ดำเนินการต่อ" class="submit-button">
+                <input type="submit" value="ดำเนินการต่อ" class="submit-button " href="../confirmation.html">
             </div>
     </form>
     <div class="footer">© 2024 TUPRDev. All rights reserved.</div>

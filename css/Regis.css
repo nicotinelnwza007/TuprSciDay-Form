@@ -22,13 +22,15 @@ a {
     font-size: 13px;
     font-weight: bold;
     color: #fff;
-    background-color: #876543;
+    background-color: #6d8cf3;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
 }
-
+.buttons{
+    background-color: #6d8cf3;
+}
 a {
     text-decoration: none;
     color: #fff;

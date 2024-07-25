@@ -13,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #8B5D33;
+    background-color: #4074a5;
 }
 
 .content {
@@ -42,7 +42,7 @@ body {
 }
 
 .header {
-    background-color: #8B5D33;
+
     padding: 15px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -57,17 +57,17 @@ body {
 }
 
 .title {
-    font-size: 28px;
+    font-size: 36px;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
-    color: #8B5D33;
+    color: #4074a5;
     margin: 15px 0;
 }
 
 .description {
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Roboto", sans-serif;
-    color: #8B5D33;
+    color: #4074a5;
 }
 
 .buttons {
@@ -77,7 +77,7 @@ body {
 }
 
 a {
-    background-color: #8B5D33;
+    background-color: #4074a5;
     color: #FFFFFF;
     border: none;
     padding: 15px;
@@ -93,7 +93,7 @@ a {
 }
 
 a:hover {
-    background-color: #6E4A26;
+    background-color: #243a75;
 }
 
 a:focus {

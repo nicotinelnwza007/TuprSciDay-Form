@@ -22,7 +22,7 @@
 
     $count_hydrolic_query = "SELECT COUNT(DISTINCT teamname) AS team_count FROM hydrolic";
     $count_poster_query = "SELECT COUNT(DISTINCT teamname) AS team_count FROM poster";
-    $count_smth_query = "SELECT COUNT(DISTINCT teamname) AS team_count FROM smth";
+    $count_sciquiz_query = "SELECT COUNT(DISTINCT teamname) AS team_count FROM sciquiz";
   
     $count_hydrolic_result = mysqli_query($conn, $count_hydrolic_query);
     if ($count_hydrolic_result) {
@@ -42,12 +42,12 @@
     }
     
 
-    $count_smth_result = mysqli_query($conn, $count_smth_query);
-    if ($count_smth_result) {
-        $row = mysqli_fetch_assoc($count_smth_result);
-        $team_count_smth = $row['team_count'];
+    $count_sciquiz_result = mysqli_query($conn, $count_sciquiz_query);
+    if ($count_sciquiz_result) {
+        $row = mysqli_fetch_assoc($count_sciquiz_result);
+        $team_count_sciquiz = $row['team_count'];
     } else {
-        $team_count_smth = "Error: " . mysqli_error($conn);
+        $team_count_sciquiz = "Error: " . mysqli_error($conn);
     }
     
     mysqli_close($conn);
@@ -57,27 +57,53 @@
 
     <div class="box-container">
         <div class="box box-link">
+        <div class="box-content">
+                <h1>การแข่งขันการออกแบบโปสเตอร์</h1>
+                <a href="pdf/Poster.pdf" class="details">คลิกดูรายละเอียด</a>
+                <p>ทีมที่สมัคร:<?php echo htmlspecialchars($team_count_poster); ?> / 40</p>
+                <h2>วันที่แข่ง : 13 ส.ค. 67 </h2>
+                <a href="poster/poster.php" class="btn-register">Register</a>
+            </div>
+        </div>
+        <div class="box box-link">
             <div class="box-content">
-                <h1>Hydrulics Arms Competiton</h1>
-                <h2>อภิสันต์ สามัญตา</h2>
+                <h1>การอบรมการแข่งขันแขนกลไฮดรอลิก</h1>
+                <a href="pdf/Hydrolicarm.pdf" class="details">คลิกดูรายละเอียด</a>
                 <p>ทีมที่สมัคร:  <?php echo htmlspecialchars($team_count_hydrolic); ?></p>
+                <h2>วันที่แข่ง : 13-16 ส.ค. 67</h2>
                 <a href="hydrolic/Hydrolic.php" class="btn-register">Register</a>
             </div>
         </div>
         <div class="box box-link">
         <div class="box-content">
-                <h1>Sci-Poster</h1>
-                <h2>อภิสันต์ สามัญตา</h2>
-                <p>ทีมที่สมัคร:<?php echo htmlspecialchars($team_count_poster); ?></p>
-                <a href="poster/poster.php" class="btn-register">Register</a>
+                <h1>การแข่งขันตอบปัญหาวิทยาศาสตร์และเทคโนโลยี</h1>
+                <a href="img/SciQuiz.png" class="details">คลิกดูรายละเอียด</a>
+                <p>ทีมที่สมัคร: <?php echo htmlspecialchars($team_count_sciquiz); ?> / 50</p>
+                <h2>วันที่แข่ง : 19 ส.ค. 67 </h2>
+                <a href="Sciquiz/SciQuiz.php" class="btn-register">Register</a>
+            </div>
+        </div>
+        <div class="box box-link">
+            <div class="box-content">
+                <h1>การแข่งขันการแสดงทางวิทยาศาสตร์ (Science Show)</h1>
+                <a href="img/SciSHow.JPG" class="details">คลิกดูรายละเอียด</a>
+                <h2>วันที่แข่ง : 20 ส.ค. 67 </h2>
             </div>
         </div>
         <div class="box box-link">
         <div class="box-content">
-                <h1>แข่ง hydrolic อะตุเอง</h1>
-                <h2>อภิสันต์ สามัญตา</h2>
-                <p>ทีมที่สมัคร: <?php echo htmlspecialchars($team_count_smth); ?></p>
-                <a href="smth/smth.php" class="btn-register">Register</a>
+                <h1>การแข่งขัน Sci-Tech Clothing (ชุดวิทย์)</h1>
+                <a href="pdf/Sccloth.pdf" class="details">คลิกดูรายละเอียด</a>
+                <p>ทีมที่สมัคร: <?php echo htmlspecialchars($team_count_sciquiz); ?> / 30</p>
+                <h2>วันที่แข่ง : 21 ส.ค. 67 </h2>
+                <a href="SciCloth/scicloth.php" class="btn-register">Register</a>
+            </div>
+        </div>
+        <div class="box box-link">
+            <div class="box-content">
+                <h1>การแข่งขันโครงงานวิทยาศาสตร์และเทคโนโลยี ประเภททดลองและประเภทสิ่งประดิษฐ์</h1>
+                <a href="pdf/SciProject.pdf" class="details">คลิกดูรายละเอียด</a>
+                <h2>วันที่แข่ง : 23 ส.ค. 67 </h2>
             </div>
         </div>
     </div>

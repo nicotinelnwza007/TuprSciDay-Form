@@ -32,7 +32,7 @@ body {
 }
 
 .highlight {
-    color: #876543;
+    color: #6d8cf3;
     font-weight: bold;
     font-size: 20px;
     margin-left: 3px;
@@ -162,7 +162,7 @@ body {
 }
 
 .submit-button {
-    background: #876543;
+    background: #6d8cf3;
     color: white;
     font-weight: bold;
     margin: 10px;
@@ -174,7 +174,7 @@ body {
 }
 
 .submit-button:hover {
-    background: #654321;
+    background: #4b6cd6;
 }
 
 

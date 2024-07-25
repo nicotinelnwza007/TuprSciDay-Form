@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
 
 body {
-    background-color: #876543;
+    background-color: #457097; 
     font-family: "Noto Sans Thai", sans-serif;
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ body {
 }
 
 .box {
-    background-color: #ffffff;
+    background-color: #ffffff; 
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 10px;
@@ -29,7 +29,7 @@ body {
 
 .box:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /
 }
 
 .box-content {
@@ -37,27 +37,27 @@ body {
 }
 
 .box-content h1 {
-    font-size: 2em;
-    color: #333333;
+    font-size: 28px;
+    color: #1976d2;
     margin: 0;
 }
 
 .box-content h2 {
     font-size: 1.5em;
-    color: #555555;
+    color: #f880f8; 
     margin: 10px 0;
 }
 
 .box-content p {
     font-size: 1.1em;
-    color: #666666;
+    color: #333333; 
     margin: 10px 0;
 }
 
 .btn-register {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #8b5e34;
+    background-color: #2f63d3; 
     color: #ffffff;
     text-decoration: none;
     border-radius: 25px;
@@ -67,7 +67,7 @@ body {
 }
 
 .btn-register:hover {
-    background-color: #6e4828;
+    background-color: #2344a0; 
     transform: scale(1.05);
 }
 

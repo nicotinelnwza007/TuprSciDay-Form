@@ -1,6 +1,23 @@
-
 <?php
-include 'config.php';
+include '../config.php';
+
+
+// $MAX_TEAMS = 2;
+
+
+$conn = mysqli_connect("localhost", "root", "admin");
+$db = mysqli_select_db($conn, "sciweek_db");
+
+$count_query = "SELECT COUNT(DISTINCT teamname) AS team_count FROM hydrolic";
+$count_result = mysqli_query($conn, $count_query);
+$row = mysqli_fetch_assoc($count_result);
+$current_teams = $row['team_count'];
+
+// if ($current_teams >= $MAX_TEAMS) {
+//     mysqli_close($conn);
+//     header("Location: ../max_teams_reached.html");
+//     exit();
+// }
 
 $num_members = 5;
 for ($i = 1; $i <= $num_members; $i++) {
@@ -12,23 +29,11 @@ for ($i = 1; $i <= $num_members; $i++) {
     $number = htmlspecialchars($_POST["number$i"]);
     $tel = htmlspecialchars($_POST["tel$i"]);
 
-    $conn = mysqli_connect("localhost", "root", "admin");
-    $db = mysqli_select_db($conn,"sciweek_db");
-    $sql = "insert into hydrolic (teamname,name, surname, studentid, room, number, tel) values ('$teamname','$name', '$surname', '$studentid', '$room', '$number', '$tel')";
+    $sql = "INSERT INTO hydrolic (teamname, name, surname, studentid, room, number, tel) VALUES ('$teamname', '$name', '$surname', '$studentid', '$room', '$number', '$tel')";
     mysqli_query($conn, $sql);
-    print $sql;
 }
 
-$count_query = "SELECT COUNT(DISTINCT teamname) AS team_count FROM student";
-$count_result = mysqli_query($conn, $count_query);
-
-if ($count_result) {
-    mysqli_close($conn);
-    header("Location: ../confirmation.html");
-    exit();
-} else {
-    echo "Error: " . mysqli_error($conn);
-}
-
-
+mysqli_close($conn);
+header("Location: ../confirmation.html");
+exit();
 ?>
