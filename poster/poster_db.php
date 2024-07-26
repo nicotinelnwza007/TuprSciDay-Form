@@ -8,14 +8,14 @@ $MAX_TEAMS_M1_3 = 20;
 
 
 
-    $teamname = htmlspecialchars($_POST["teamname"]);
+
     $name = htmlspecialchars($_POST["name1"]);
     $surname = htmlspecialchars($_POST["surname1"]);
     $studentid = htmlspecialchars($_POST["studentid1"]);
     $room = htmlspecialchars($_POST["room1"]);
     $number = htmlspecialchars($_POST["number1"]);
     $tel = htmlspecialchars($_POST["tel1"]);
-    $sql = "INSERT INTO poster (teamname, name, surname, studentid, room, number, tel) VALUES ('$teamname', '$name', '$surname', '$studentid', '$room', '$number', '$tel')";
+    $sql = "INSERT INTO poster ( name, surname, studentid, room, number, tel) VALUES ( '$name', '$surname', '$studentid', '$room', '$number', '$tel')";
 
 
 $conn = mysqli_connect("localhost", "root", "admin");

@@ -3,8 +3,8 @@
 include '../config.php';
 
 $num_members = 1;
-$MAX_TEAMS_M4_6 = 20;
-$MAX_TEAMS_M1_3 = 1;
+$MAX_TEAMS_M4_6 = 15;
+$MAX_TEAMS_M1_3 = 15;
 
 
 

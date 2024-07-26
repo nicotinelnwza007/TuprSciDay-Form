@@ -47,25 +47,25 @@
             <div class='member-fieldset'>
                 <div class='members'>สมาชิกคนที่ $i</div>
                   <div class='form-group'>
-                    <label for='studentid$i' class='form'>เลขประจำตัวนักเรียน: </label>
+                    <label for='studentid$i' class='form'>เลขประจำตัวนักเรียน : </label>
                      <div class='form-container'>
                     <input type='text' id='studentid$i' name='studentid$i' class='form-control' required  MAXLENGTH='5' onkeypress='if((event.keyCode<46)||(event.keyCode>57)) event.returnValue=false;'>
                 </div>
                 <div class='form-group'>
-                    <label for='name$i' class='form'>ชื่อ: </label>
+                    <label for='name$i' class='form'>คำนำหน้าและชื่อ (ตัวอย่าง นายตอพร ไม่ต้องเว้นวรรค) :  </label>
                  <div class='form-container'>
                     <input type='text' id='name$i' name='name$i' class='form-control' required>
                     </div>
                     </div>
                 </div>
                 <div class='form-group'>
-                    <label for='surname$i' class='form'>นามสกุล: </label>
+                    <label for='surname$i' class='form'>นามสกุล : </label>
                      <div class='form-container'>
                     <input type='text' id='surname$i' name='surname$i' class='form-control' required>
                     </div>
                 </div>
                       <div class='form-group'>
-                          <label for='room$i' class='form'>ห้อง(601,201,302): </label>
+                         <label for='room$i' class='form'>ห้อง ( ตัวอย่าง 6/1 = 601 ): </label>
                      <div class='form-container'><SELECT name='room$i' class='form-control' required><option value=''>- - Please select - -</option>";
 
                      
@@ -80,15 +80,15 @@
            
                 </div>
                 <div class='form-group'>
-                    <label for='number$i' class='form'>เลขที่: </label>
+                    <label for='number$i' class='form'>เลขที่ : </label>
                      <div class='form-container'>
                     <input type='text' id='number$i' name='number$i' class='form-control' required MAXLENGTH='2' onkeypress='if((event.keyCode<46)||(event.keyCode>57)) event.returnValue=false;'>
                     </div>
                 </div>
-                <div class='form-group'>
-                    <label for='tel$i' class='form'>เบอร์ติดด่อ: </label>
+               <div class='form-group'>
+                    <label for='tel$i' class='form'> เบอร์ติดด่อ (ตัวอย่าง 0999999999 ไม่ต้องใส่ - ) : </label>
                      <div class='phone-input-container'>
-                        <input type='text' id='tel$i' name='tel$i' class='form-control phone-input' placeholder='087-654-3210' required>
+                        <input type='text' id='tel$i' name='tel$i' class='form-control phone-input' placeholder='0876543210' required>
                     </div>
                 </div>
             </div>";

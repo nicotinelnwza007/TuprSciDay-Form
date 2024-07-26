@@ -1,7 +1,7 @@
 <?php
 include '../config.php';
 
-$MAX_TEAMS = 2;
+$MAX_TEAMS = 50;
 
 $conn = mysqli_connect("localhost", "root", "admin", "sciweek_db");
 
