@@ -1,39 +1,25 @@
 <?php
-include '../config.php';
+	include '../config.php';
 
+	$count_query = "SELECT COUNT(DISTINCT teamname) AS team_count FROM hydrolic";
+	$count_result = mysqli_query($conn, $count_query);
+	$row = mysqli_fetch_assoc($count_result);
+	$current_teams = $row['team_count'];
+	$num_members = 5;
 
-// $MAX_TEAMS = 2;
+	for ($i = 1; $i <= $num_members; $i++) {
+		$teamname = htmlspecialchars($_POST["teamname"]);
+		$name = htmlspecialchars($_POST["name$i"]);
+		$surname = htmlspecialchars($_POST["surname$i"]);
+		$studentid = htmlspecialchars($_POST["studentid$i"]);
+		$room = htmlspecialchars($_POST["room$i"]);
+		$number = htmlspecialchars($_POST["number$i"]);
+		$tel = htmlspecialchars($_POST["tel$i"]);
 
+		$sql = "INSERT INTO hydrolic (teamname, name, surname, studentid, room, number, tel) VALUES ('$teamname', '$name', '$surname', '$studentid', '$room', '$number', '$tel')";
+		mysqli_query($conn, $sql);
+	}
 
-$conn = mysqli_connect("localhost", "root", "admin");
-$db = mysqli_select_db($conn, "sciweek_db");
-
-$count_query = "SELECT COUNT(DISTINCT teamname) AS team_count FROM hydrolic";
-$count_result = mysqli_query($conn, $count_query);
-$row = mysqli_fetch_assoc($count_result);
-$current_teams = $row['team_count'];
-
-// if ($current_teams >= $MAX_TEAMS) {
-//     mysqli_close($conn);
-//     header("Location: ../max_teams_reached.html");
-//     exit();
-// }
-
-$num_members = 5;
-for ($i = 1; $i <= $num_members; $i++) {
-    $teamname = htmlspecialchars($_POST["teamname"]);
-    $name = htmlspecialchars($_POST["name$i"]);
-    $surname = htmlspecialchars($_POST["surname$i"]);
-    $studentid = htmlspecialchars($_POST["studentid$i"]);
-    $room = htmlspecialchars($_POST["room$i"]);
-    $number = htmlspecialchars($_POST["number$i"]);
-    $tel = htmlspecialchars($_POST["tel$i"]);
-
-    $sql = "INSERT INTO hydrolic (teamname, name, surname, studentid, room, number, tel) VALUES ('$teamname', '$name', '$surname', '$studentid', '$room', '$number', '$tel')";
-    mysqli_query($conn, $sql);
-}
-
-mysqli_close($conn);
-header("Location: ../confirmation.html");
-exit();
+	mysqli_close($conn);
+	header("Location: ../confirmation.html");
 ?>

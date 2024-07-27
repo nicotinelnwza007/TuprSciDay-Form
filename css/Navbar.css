@@ -44,16 +44,26 @@ nav .logo a {
     margin: 10px 0;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #d9d9d9;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 0;
+}
 
-
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
     nav .container {
         flex-direction: column;
     }
 
     nav .tuprlogo {
-        margin-left: 80px;
+        margin: 0;
     }
 
     nav .logo a {
